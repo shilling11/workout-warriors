@@ -12,7 +12,7 @@ function Intro() {
     <div className="intro-container">
         <div className="img-container" id='image-1' data-aos='fade-up' data-aos-duration='500'>
             <img src="images/image-1.png" alt="" className="intro-image" />
-            <p className="img-text">Boost performance with our award-winning products</p>
+            <p className="img-text">oost performance with our award-winning products</p>
         </div>
         <div className="img-container" id='image-2' data-aos='fade-up' data-aos-duration='1000'>
             <img src="images/image-3.png" alt="" className="intro-image" />
