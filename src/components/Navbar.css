@@ -62,3 +62,9 @@ img{
     transition: 0.2s ease-in;
 }
 
+@media (max-width: 750px){
+    img{
+        width: 40px;
+    }
+}
+
