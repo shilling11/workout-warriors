@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding: 2% 7% 0 0;
+    padding: 2% 7%;
 }
 
 .header-workout, .header-warriors{
@@ -33,20 +33,6 @@
     padding: 3% 0;
 }
 
-@media (max-width: 750px){
-    .header-container{
-        background-size: cover;
-    }
-    .header-words{
-        align-items: center;
-        padding-top: 15%
-    }
-    .header-workout, .header-warriors{
-        font-size: 5rem;
-        margin-bottom: -20px;
-    }
-}
-
 .call-to-action{
     color: white;
     font-family: 'Oswald', sans-serif;
@@ -56,11 +42,26 @@
     padding: 7px 25px;
     background: #12b575;
     border-radius: 50px;
-    margin-top: 15px;
+    margin: 15px 0;
 }
 
 .call-to-action:hover{
     background-color: white;
     color: #12b575;
     transition: 0.2s ease-in;
+}
+
+@media (max-width: 750px){
+    .header-container{
+        background-size: cover;
+        min-height: 85vh;
+        height: auto;
+    }
+    .header-words{
+        margin-top: 15%;
+    }
+    .header-workout, .header-warriors{
+        font-size: 5rem;
+        margin-bottom: -20px;
+    }
 }

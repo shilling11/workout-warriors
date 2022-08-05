@@ -1,4 +1,5 @@
 .intro-container{
+    display: block;
     width: 100%;
     min-height: 70vh;
     display: flex;
@@ -7,8 +8,12 @@
 }
 
 .img-container{
+    display: flex;
+    flex-direction: column;
     flex: 1;
+    align-items: center;
     text-align: center;
+    justify-content: space-around;
     padding: 3%;
     font-size: 30px;
     font-weight: 400;
@@ -37,11 +42,13 @@
 }
 
 @media (max-width: 750px){
+    .intro-container{
+        flex-direction: column;
+    }
     .img-container{
-        font-size: 20px;
+        padding: 5%;
     }
     .img-container img{
-        height: 100px;
-        width: 100px;
+        margin-bottom: 7%;
     }
 }

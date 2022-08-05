@@ -69,8 +69,31 @@
     visibility: hidden;
 }
 
-.articles-container a:hover + p{
+.articles-images a:hover + p, .articles-images p:hover{
     background: rgba(224,224,224,0.75);
     visibility: visible;
     transition: 0.2s ease;
+    cursor: pointer;
+}
+
+@media (max-width: 750px){
+    .articles-container{
+        min-height: auto;
+        padding: 5%;
+    }
+    .articles-images{
+        flex-direction: column;
+    }
+    .articles-images img{
+        padding-bottom: 3%;
+    }
+    .large-container{
+        margin-right: 0;
+    }
+    .articles-images p{
+        top: 0;
+        font-size: 1.5rem;
+        bottom: auto;
+        padding-bottom: 5%;
+    }
 }
