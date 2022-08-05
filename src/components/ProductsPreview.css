@@ -10,9 +10,3 @@
 .browse{
     font-size: 2rem;
 }
-
-@media (max-width: 750px){
-    .products-container{
-        
-    }
-}
