@@ -1,0 +1,67 @@
+.header-container{
+    background: url('/public/images/header-image.png');
+    width: 100%;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.header-words{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 2% 7%;
+}
+
+.header-workout, .header-warriors{
+    font-size: 7em;
+    color: #c7c7c7;
+    margin-bottom: -30px;
+}
+
+.header-warriors{
+    background: linear-gradient(90deg, #00BA82 13.98%, #BE8900 84.79%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.header-subtitle{
+    color: #e0e0e0;
+    font-size: 2rem;
+    padding: 3% 0;
+}
+
+.call-to-action{
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 7px 25px;
+    background: #12b575;
+    border-radius: 50px;
+    margin: 15px 0;
+}
+
+.call-to-action:hover{
+    background-color: white;
+    color: #12b575;
+    transition: 0.2s ease-in;
+}
+
+@media (max-width: 750px){
+    .header-container{
+        background-size: cover;
+        min-height: 85vh;
+        height: auto;
+    }
+    .header-words{
+        margin-top: 15%;
+    }
+    .header-workout, .header-warriors{
+        font-size: 5rem;
+        margin-bottom: -20px;
+    }
+}
