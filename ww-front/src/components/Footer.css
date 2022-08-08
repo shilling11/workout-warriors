@@ -39,6 +39,7 @@
     color: white;
     background-color: #3a3a3a;
     border-style: none;
+    cursor: pointer;
 }
 
 .footer-logos{

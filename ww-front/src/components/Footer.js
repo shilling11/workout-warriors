@@ -14,10 +14,10 @@ function Footer() {
                 Subscribe to get exclusive offers and updates every week
             </p>
         </div>
-        <div className="footer-subscription">
-            <input type="text" placeholder='Enter your email' className="email-input" />
-            <button className="subscribe-btn">SUBSCRIBE</button>
-        </div>
+        <form className="footer-subscription" action='/post' method='POST'>
+            <input type="email" placeholder='Enter your email' className="email-input" name='email' />
+            <input type='submit' className="subscribe-btn" value='SUBSCRIBE' />
+        </form>
         <div className="footer-logos">
             <a href='https://www.facebook.com' target="_blank">
             <img src="/images/image-13.png" alt="" className="logo" />
