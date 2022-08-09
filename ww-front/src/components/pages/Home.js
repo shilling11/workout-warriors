@@ -5,7 +5,6 @@ import Testimonials from '../Testimonials'
 import ProductsPreview from '../ProductsPreview';
 import ArticlesPreview from '../ArticlesPreview';
 import '../../App.css';
-import { ArticlesData } from '../ArticlesData';
 
 function Home(){
     return(
