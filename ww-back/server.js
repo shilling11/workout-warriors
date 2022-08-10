@@ -11,7 +11,7 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-mongoose.connect('mongodb://localhost:27017/subscriberdb', () => {
+mongoose.connect('mongodb://localhost:27017/workoutdb', () => {
       console.log('Subscriber database connected');
     }, (err) => {
       console.log(err);
