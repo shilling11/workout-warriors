@@ -1,0 +1,27 @@
+.cart-container{
+    background-color: #e0e0e0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 7%;
+    flex-direction: column;
+}
+
+.sum{
+    font-size: 20px;
+    text-align: right;
+    font-weight: 500;
+}
+
+.item-container{
+    display: grid;
+    padding-bottom: 6%;
+    grid-template-columns: repeat(6, 1fr);
+    text-align: right;
+    align-items: center;
+}
+
+.item-image{
+    width: 150px;
+}
+

@@ -1,6 +1,21 @@
+.full-product-page{
+    background-color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+}
+
+.basket{
+    display: flex;
+    margin: 10px 20px;
+    align-self: flex-end;
+}
+
+.basket img{
+    width: 40px;
+}
+
 .products-page{
     display: grid;
-    background-color: #e0e0e0;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     grid-auto-rows: minmax(100px, auto);
@@ -8,8 +23,6 @@
 
 .prod-text{
     color: #3a3a3a;
-    background-color: #e0e0e0;
-    padding-top: 5%;
     text-align: center;
     font-size: 3rem;
 }
@@ -47,6 +60,21 @@
 .product-price{
     font-size: 25px;
     margin-bottom: 4%;
+}
+
+.product-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+form input[type=number]{
+    margin-bottom: 5%;
+    border: none;
+    border-radius: 5px;
+    text-align: left;
+    width: 50px;
 }
 
 .add-to-cart{
