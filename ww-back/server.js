@@ -18,7 +18,8 @@ mongoose.connect('mongodb://localhost:27017/workoutdb', () => {
       console.log(err);
     });
 
-app.post('/post', async(req, res) => {
+//subscribe request
+app.post('/subscribe', async(req, res) => {
 
   const output = 
     `<h2 style='color: #12b575'>Thank you for subscribing to Workout Warriors!</h2>
@@ -52,11 +53,11 @@ app.post('/post', async(req, res) => {
       await transporter.sendMail(mailOptions, (err, data)=> {
         if (err){
             console.log(err);
-            console.log('failure!');
+            console.log('Failure in sending subscriber email!');
         }
         else {
             console.log(data);
-            console.log('success!');
+            console.log('Subscriber email sent!');
         }
     });
   
@@ -68,6 +69,46 @@ app.post('/post', async(req, res) => {
   res.redirect('back');
 });
 
+//contact request
+app.post('/contact', async(req, res) => {
+
+  const output = 
+    `<h2 style='color: #12b575'>New contact form</h2>
+    <p>From: ${req.body.name} (email: ${req.body.email})</p>
+    <br/>
+    <p>Message: ${req.body.message}</p>`
+
+    const transporter = nodemailer.createTransport({
+      service: 'outlook365',
+      auth: {
+        user: process.env.USER, //fill in username
+        pass: process.env.PASS //fill in password
+      },
+    });
+
+    const mailOptions = {
+      from: `"Nodemon mailer" <${process.env.USER}>`,
+      to: process.env.USER, //fill in business email
+      subject: 'New contact form',
+      text: 'Contact form:',
+      html: output
+    }
+
+    await transporter.sendMail(mailOptions, (err, data)=> {
+      if (err){
+          console.log(err);
+          console.log('Failure in sending contact form!');
+      }
+      else {
+          console.log(data);
+          console.log('Contact form sent!');
+      }
+    })
+
+  res.redirect('back');
+});
+
+//Add to cart request
 app.post('/addToCart', async(req, res) => {
     const item = new Cart.products({
     qty: req.body.qty,
@@ -90,6 +131,7 @@ app.post('/addToCart', async(req, res) => {
     res.redirect('/addToCart');
 });
 
+//Delete cart item request
 app.post('/deleteItem', async(req, res) => {
   await Cart.products.deleteOne({name: req.body.name});
   res.redirect('back');
