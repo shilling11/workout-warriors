@@ -92,3 +92,11 @@ form input[type=number]{
     transition: 0.2s ease;
     cursor: pointer;
 }
+
+@media (max-width: 750px){
+    .products-page{
+        grid-template-columns: repeat(1, auto);
+        width: 80%;;
+        align-self: center;
+    }
+}

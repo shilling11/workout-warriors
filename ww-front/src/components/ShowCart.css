@@ -25,3 +25,29 @@
     width: 150px;
 }
 
+.item-container button{
+    margin: 20px;
+    font-size: 15px;
+    padding: 10px 20px;
+    color: #e0e0e0;
+    background-color: #3a3a3a;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.item-container button:hover{
+    background-color: #e0e0e0;
+    color: #3a3a3a;
+    transition: 0.2s ease;
+}
+
+@media (max-width: 750px){
+    .item-container{
+        grid-template-columns: none;
+        grid-template-rows: repeat(6, auto);
+        text-align: center;
+        justify-content: center;
+    }
+}
+

@@ -15,17 +15,17 @@ h2{
 
 .input-container{
     margin: 5% 0;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 20px 0;
     width: 500px;
-    background-color: #12b575;
+    background-color: #3a3a3a;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 
-input{
+.input-container input{
     margin: 20px;
     width: 80%;
     height: 30px;
@@ -39,19 +39,25 @@ input{
     border-radius: 10px;
 }
 
-button{
+.input-container button{
     margin: 20px;
     font-size: 15px;
     padding: 10px 20px;
-    color: #e0e0e0;
-    background-color: #3a3a3a;
+    color: #3a3a3a;
+    background-color: #e0e0e0;
     border: none;
     border-radius: 50px;
     cursor: pointer;
 }
 
-button:hover{
-    background-color: #e0e0e0;
-    color: #3a3a3a;
+.input-container button:hover{
+    background-color: #12b575;
+    color: #e0e0e0;
     transition: 0.2s ease;
+}
+
+@media (max-width: 750px){
+    .input-container{
+        width: 90vw;
+    }
 }

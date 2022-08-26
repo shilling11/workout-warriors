@@ -66,5 +66,8 @@ img{
     img{
         width: 40px;
     }
+    .navbar a{
+        width: 5%;
+    }
 }
 
