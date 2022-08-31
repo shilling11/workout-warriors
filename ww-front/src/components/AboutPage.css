@@ -1,0 +1,38 @@
+.about-header{
+    background: url('/public/images/about-header.jpg') no-repeat;
+    background-size: cover;
+    background-color: #e0e0e0;
+    background-position-y: 60%;
+    padding: 4%;
+}
+
+.about-intro{
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    padding: 6%;
+    height: auto;
+}
+
+.about-intro img{
+    object-fit: cover;
+    width: 30%;
+}
+
+.about-intro p{
+    padding: 5%;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 750px){
+    .about-intro{
+        flex-direction: column;
+    }
+    .about-intro img{
+        width: 50%;
+    }
+    .about-intro p{
+        font-size: 1rem;
+        text-align: center;
+    }
+}
