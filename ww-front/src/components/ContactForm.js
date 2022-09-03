@@ -13,7 +13,7 @@ function ContactForm() {
         <div className="input-container">
         <input type="text" name="name" placeholder='Full name' required/>
         <input type="email" className="email" name='email' placeholder='Email' required/>
-        <input type="text" className="message" name='message' placeholder='Please enter your message...' required/>
+        <textarea className="message" name='message' placeholder='Please enter your message...' required/>
         <button className="submit-contact" type='submit'>Submit</button>
         </div>
     </form>
